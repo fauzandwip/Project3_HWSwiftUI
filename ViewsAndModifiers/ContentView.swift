@@ -34,6 +34,7 @@ struct ContentView: View {
         
         // MARK: - Modifier order matters
         
+        // switch between frame and background
 //            Button("Hello, world!") {
 //                print(type(of: self.body))
 //            }
@@ -136,10 +137,14 @@ struct ContentView: View {
         
         
         // MARK: - Custom Containers
-        GridStack(rows: 4, columns: 4) { row, col in
-            Image(systemName: "\(row * 4 + col).circle")
-            Text("R\(row) C\(col)")
-        }
+//        GridStack(rows: 4, columns: 4) { row, col in
+//            Image(systemName: "\(row * 4 + col).circle")
+//            Text("R\(row) C\(col)")
+//        }
+        
+        // MARK: - Challenge 3 Project3
+        Text("Title")
+            .largeBlueTitle()
     }
 }
 
@@ -173,9 +178,23 @@ struct Watermark: ViewModifier {
     }
 }
 
+// MARK: - Challenge 3 Project3
+struct LargeBlueTitle: ViewModifier {
+    
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundColor(.blue)
+    }
+}
+
 extension View {
     func watermarked(with text: String) -> some View {
         modifier(Watermark(text: text))
+    }
+    
+    func largeBlueTitle() -> some View {
+        modifier(LargeBlueTitle())
     }
 }
 
