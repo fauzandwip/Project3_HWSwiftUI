@@ -131,9 +131,9 @@ struct ContentView: View {
         
         
         // MARK: - Custom Modifiers
-        //        Color.blue
-        //            .frame(width: 300, height: 200)
-        //            .watermarked(with: "Hacking with Swift")
+//                Color.blue
+//                    .frame(width: 300, height: 200)
+//                    .watermarked(with: "Hacking with Swift")
         
         
         // MARK: - Custom Containers
@@ -143,7 +143,7 @@ struct ContentView: View {
 //        }
         
         // MARK: - Challenge 3 Project3
-        Text("Title")
+        Text("Custom View and Modifiers")
             .largeBlueTitle()
     }
 }
